@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1365752704 source:/home/benoit/Bureau/Programmes/ChicknBump/main.cpp
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<iostream>
+	"main.h"
+
+1365691394 /home/benoit/Bureau/Programmes/ChicknBump/terrain.h
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1365692102 source:/home/benoit/Bureau/Programmes/ChicknBump/terrain.cpp
+	"terrain.h"
+	"Poussin.h"
+
+1365704810 /home/benoit/Bureau/Programmes/ChicknBump/Poussin.h
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<iostream>
+
+1365705060 source:/home/benoit/Bureau/Programmes/ChicknBump/Poussin.cpp
+	<SFML/Graphics.hpp>
+	<iostream>
+	"Poussin.h"
+	"terrain.h"
+
+1365653165 /home/benoit/Bureau/Programmes/ChicknBump/main.h
+	<SFML/Graphics.hpp>
+	<iostream>
+	"terrain.h"
+	"Poussin.h"
+
