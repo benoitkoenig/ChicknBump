@@ -29,7 +29,7 @@ int Terrain::donnerPixel(int x, int y) {
     return 0;
 }
 
-void Terrain::rafec(Poussin* p1, Poussin* p2, Poussin* p3, Poussin* p4) {
+void Terrain::rafec(Poussin* p1, Poussin* p2, Poussin* p3, Poussin* p4) {//Toujours pas de delete sur les pointeurs
     Poussin* poussins[] = {p1, p2, p3, p4};
     int i;
     pfenetre->Clear(sf::Color::Black);
@@ -62,6 +62,15 @@ void Terrain::interactions(sf::Event ev, int *continuer, Poussin* p1, Poussin* p
     }
 }
 
+/*
+    Tu utilise cette méthode à chaque frame, ça veut dire qu'à chaque
+    frame tu créés un nouveau pointeur sur image, un nouveau pointeur
+    sur sprite et tu recharges l'image en mémoire.
+    Tu devrais mettre ces variables comme variables de classe, tu as
+    d'énorme fuites de mémoire (tu ne delete aucun pointeur !) ici
+    en plus d'un chargement d'image par frame qui te fait perdre du
+    tempsen calcul.
+*/
 int Terrain::accueillir() {
     sf::Image* img;
     sf::Sprite* spt;

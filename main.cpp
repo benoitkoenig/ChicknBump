@@ -4,6 +4,7 @@
 
 #include "main.h"
 
+//Tu dois absoluement refaire le tour de ton code et suprimer les pointeurs quand ils ne sont plus utilisés
 
 int main() {
     Terrain* terrain;
@@ -14,7 +15,7 @@ int main() {
 }
 
 void jeu(Terrain* terrain) {
-    Poussin* p1 = new Poussin(172, 350, "jaune", sf::Key::Up, sf::Key::Left, sf::Key::Right);
+    Poussin* p1 = new Poussin(172, 350, "jaune", sf::Key::Up, sf::Key::Left, sf::Key::Right);   //Tu ne delete aucun poussin à la fin
     Poussin* p2 = new Poussin(356, 275, "rouge", sf::Key::Z, sf::Key::Q, sf::Key::D);
     Poussin* p3 = new Poussin(597, 175, "magenta", sf::Key::F, sf::Key::C, sf::Key::B);
     Poussin* p4 = new Poussin(742, 323, "vert", sf::Key::I, sf::Key::J, sf::Key::L);
